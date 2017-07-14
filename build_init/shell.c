@@ -1,48 +1,46 @@
 #include <stdio.h>
-#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
 #include <pty.h>
 #include <termios.h>
 #include <fcntl.h>
-
+#include <stdarg.h>
 #include <sys/select.h>
 #include <sys/wait.h>
-
-
+#include <sys/io.h>
+#include <sys/types.h>
 
 void ttyputc(unsigned char c)
 {
-    while((inb(0x3fd) & 0x40) == 0);
-      outb(c, 0x3f8);
+  while((inb(0x3fd) & 0x40) == 0);
+  outb(c, 0x3f8);
 }
 
 unsigned char ttygetc(void)
 {
-    while((inb(0x3fd) & 0x1) == 0);
-      return inb(0x3f8);
+  while((inb(0x3fd) & 0x1) == 0);
+  return inb(0x3f8);
 }
 
 void ttyputs(char *c)
 {
-    while(*c) {
-          if (*c == '\n') ttyputc('\r');
-              ttyputc(*c);
-                  c++;
-                    }
+  while(*c) {
+    if (*c == '\n') ttyputc('\r');
+    ttyputc(*c);
+    c++;
+  }
 }
 
 void tty_printf(const char *format, ...)
 {
 
-    char out_buf[128];
+  char out_buf[128];
 
-      va_list arg_list;
-        va_start(arg_list, format);
-
-          vsprintf(out_buf, format, arg_list);
-            ttyputs(out_buf);
+  va_list arg_list;
+  va_start(arg_list, format);
+  vsprintf(out_buf, format, arg_list);
+  ttyputs(out_buf);
 }
 
 
@@ -64,11 +62,10 @@ int main()
 
     // child
     else if (pid == 0) {
-
         char *args[] = { NULL };
 
-        // run the BC calculator
-        execvp("term2048", args);
+        // run the program
+        execl("/term2048", "/term2048", (char *) NULL);
         perror("in child");
     }
 
@@ -93,27 +90,23 @@ int main()
 
             char input;
             char output;
-
-
+            /*
             if (FD_ISSET(master, &read_fd))
             {
                 if (read(master, &output, 1) != -1)
-                    write(STDOUT_FILENO, &output, 1);
+                    ttyputc(output);
                 else
                     break;
             }
 
             if (FD_ISSET(STDIN_FILENO, &read_fd))
             {
-                read(STDIN_FILENO, &input, 1);
+                input = ttygetc();
                 write(master, &input, 1);
             }
-
-            if (FD_ISSET(STDIN_FILENO, &error_fd))
-            {
-                read(STDIN_FILENO, &input, 1);
-                write(master, &input, 1);
-            }
+            */
+            ttyputc('x');
+            //printf("x");
         }
     }
     return 0;
