@@ -28,7 +28,7 @@ unsigned char ttygetc(void)
 void ttyputs(char *c)
 {
   while(*c) {
-    if (*c == '\n') ttyputc('\r');
+    // if (*c == '\n') ttyputc('\r');
     ttyputc(*c);
     c++;
   }
@@ -101,6 +101,8 @@ int main()
         return 1;
     }
     pid = forkpty(&master, buf, &terminal, NULL);
+    int flags = fcntl(master, F_GETFL, 0);
+    fcntl(master, F_SETFL, flags | O_NONBLOCK);
     // Unable to fork
     if (pid < 0) {
         tty_printf("PID: %d, MASTER: %d, PTY NAME: %x", pid, master, buf);
@@ -134,26 +136,24 @@ int main()
             FD_SET(STDIN_FILENO, &read_fd);
 
             // figure what is ready
-            select(master+1, &read_fd, &write_fd, &error_fd, NULL);
+            // select(master+1, &read_fd, &write_fd, &error_fd, NULL);
 
             char input;
             char output[128] = { (char) 0x00 };
-            
             if (FD_ISSET(master, &read_fd))
             {
                 if (read(master, output, 128) != -1)
                     ttyputs(output);
                     
-                else
-                    break;
             }
-
+            
             //if (FD_ISSET(STDIN_FILENO, &read_fd))
             //{
                 //int n;
                 //if ((n = read(STDIN_FILENO, output, 128)) != -1) 
                 //{
                     input = ttygetc();
+                    ttyputc(input);
                     write(master, &input, 1);
                     //ttyputs(output);
                 //}
