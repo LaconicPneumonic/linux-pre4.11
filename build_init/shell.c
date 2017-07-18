@@ -113,7 +113,7 @@ int main()
         char *args[] = { NULL };
 
         // run the program
-        execl("bash-static", "bash-static", (char *) NULL);
+        execl("bin/bash-static", "bin/bash-static", (char *) NULL);
         perror("in child");
     }
 
@@ -137,22 +137,30 @@ int main()
             select(master+1, &read_fd, &write_fd, &error_fd, NULL);
 
             char input;
-            char output[128];
+            char output[128] = { (char) 0x00 };
             
             if (FD_ISSET(master, &read_fd))
             {
                 if (read(master, output, 128) != -1)
                     ttyputs(output);
+                    
                 else
                     break;
             }
 
-            if (FD_ISSET(STDIN_FILENO, &read_fd))
-            {
-                input = ttygetc();
-                ttyputc(input);
-                write(master, &input, 1);
-            }
+            //if (FD_ISSET(STDIN_FILENO, &read_fd))
+            //{
+                //int n;
+                //if ((n = read(STDIN_FILENO, output, 128)) != -1) 
+                //{
+                    input = ttygetc();
+                    write(master, &input, 1);
+                    //ttyputs(output);
+                //}
+                //input = ttygetc();
+                //ttyputc(input);
+                //write(master, &input, 1);
+            //}
         }
     }
     return 0;
