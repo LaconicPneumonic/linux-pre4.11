@@ -103,8 +103,22 @@ void probe_filename(char *path, char *message, int length)
 
 int main(int argc, char *argv)
 {
-  static char buf[128];
   iopl(3);
+  mount("devpts", "/dev/pts/", "devpts", 0, NULL);
+  mount("sysfs", "/sys", "sysfs", 0, NULL);
+  mount("proc", "/proc", "proc", 0, NULL);
+  
+  static char buf[128];
+
+  probe_filename("/dev/console", "I am console", 12);
+  probe_filename("/dev/ttyS0",   "I am ttyS0", 10);
+  probe_filename("/dev/ttyS1",   "I am ttyS1", 10);
+  
+  
+  write(1, "something", 10);
+  write(2, "foo", 4);
+
+  /*iopl(3);
   outb('a', 0x3f8);
   outb('a', 0x3f8);
   outb('a', 0x3f8);
@@ -146,7 +160,7 @@ int main(int argc, char *argv)
 
   while (1) {
     ttyputc(ttygetc());
-  }
+  }*/
 
   exit(0);
 }

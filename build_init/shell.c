@@ -25,12 +25,12 @@ unsigned char ttygetc(void)
   return inb(0x3f8);
 }
 
-void ttyputs(char *c)
+void ttyputs(char *c, int num_bytes)
 {
-  while(*c) {
-    // if (*c == '\n') ttyputc('\r');
-    ttyputc(*c);
-    c++;
+  int i;
+  for (i = 0; i < num_bytes; i++) {
+    if (c[i] == '\n') ttyputc('\r');
+    ttyputc(c[i]);
   }
 }
 
@@ -42,7 +42,7 @@ void tty_printf(const char *format, ...)
   va_list arg_list;
   va_start(arg_list, format);
   vsprintf(out_buf, format, arg_list);
-  ttyputs(out_buf);
+  ttyputs(out_buf, 128);
 }
 
 void probe(char *name)
@@ -100,9 +100,11 @@ int main()
         perror("at fork");
         return 1;
     }
+
     pid = forkpty(&master, buf, &terminal, NULL);
     int flags = fcntl(master, F_GETFL, 0);
     fcntl(master, F_SETFL, flags | O_NONBLOCK);
+    
     // Unable to fork
     if (pid < 0) {
         tty_printf("PID: %d, MASTER: %d, PTY NAME: %x", pid, master, buf);
@@ -121,47 +123,21 @@ int main()
 
     // parent
     else {
-        while (1) {
+      while (1) {
 
-            fd_set read_fd, write_fd, error_fd;
-
-            // Clear sets
-            FD_ZERO(&read_fd);
-            FD_ZERO(&write_fd);
-            FD_ZERO(&error_fd);
-
-            // Add master file descriptor to fd_set
-            FD_SET(master, &read_fd);
-            // Add std in to read fd set
-            FD_SET(STDIN_FILENO, &read_fd);
-
-            // figure what is ready
-            // select(master+1, &read_fd, &write_fd, &error_fd, NULL);
-
-            char input;
-            char output[128] = { (char) 0x00 };
-            if (FD_ISSET(master, &read_fd))
-            {
-                if (read(master, output, 128) != -1)
-                    ttyputs(output);
-                    
-            }
-            
-            //if (FD_ISSET(STDIN_FILENO, &read_fd))
-            //{
-                //int n;
-                //if ((n = read(STDIN_FILENO, output, 128)) != -1) 
-                //{
-                    input = ttygetc();
-                    ttyputc(input);
-                    write(master, &input, 1);
-                    //ttyputs(output);
-                //}
-                //input = ttygetc();
-                //ttyputc(input);
-                //write(master, &input, 1);
-            //}
-        }
+      char input;
+      char output[128];
+      
+      int a;
+      /*for (a = 0; a < 128; a ++) {
+        output[a] = (char) 0;
+      }*/
+      int num_bytes = 0;
+      if ((num_bytes = read(master, output, 128)) != -1) ttyputs(output, num_bytes);
+        input = ttygetc();
+        ttyputc(input);
+        write(master, &input, 1);
+      }
     }
     return 0;
 }
