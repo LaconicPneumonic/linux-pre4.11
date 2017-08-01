@@ -1,0 +1,629 @@
+[    0.000000] Linux version 4.10.17+ (arolland@arolland.mtv.corp.google.com) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ) #143 SMP PREEMPT Fri Jul 28 10:44:13 PDT 2017
+[    0.000000] Command line: 
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] x86/fpu: Legacy x87 FPU detected.
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bfffdfff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bfffe000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000023fffffff] usable
+[    0.000000] console [earlyser0] enabled
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.4 present.
+[    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS Bochs 01/01/2011
+[    0.000000] e820: last_pfn = 0x240000 max_arch_pfn = 0x400000000
+[    0.000000] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+Memory KASLR using RDTSC...
+[    0.000000] e820: last_pfn = 0xbfffe max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x000f0b20-0x000f0b2f] mapped at [ffff9f86000f0b20]
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000F0970 000014 (v00 BOCHS )
+[    0.000000] ACPI: RSDT 0x00000000BFFFFBC1 000034 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: FACP 0x00000000BFFFF1C0 000074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+[    0.000000] ACPI: DSDT 0x00000000BFFFE040 001180 (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: FACS 0x00000000BFFFE000 000040
+[    0.000000] ACPI: SSDT 0x00000000BFFFF234 0008DD (v01 BOCHS  BXPCSSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: APIC 0x00000000BFFFFB11 000078 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+[    0.000000] ACPI: HPET 0x00000000BFFFFB89 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000023fffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x23fff9000-0x23fffcfff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000]   node   0: [mem 0x0000000000100000-0x00000000bfffdfff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000023fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000001000-0x000000023fffffff]
+[    0.000000] ACPI: PM-Timer IO Port: 0xb008
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.000000] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbfffe000-0xbfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc0000000-0xfffbffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.000000] e820: [mem 0xc0000000-0xfffbffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:1 nr_node_ids:1
+[    0.000000] percpu: Embedded 34 pages/cpu @ffff9f883fc00000 s107864 r0 d31400 u2097152
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 2064263
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: earlyprintk=ttyS0,115200,keep 
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 8160380K/8388208K available (13401K kernel code, 2212K rwdata, 5096K rodata, 6488K init, 1216K bss, 227828K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 64.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16640 nr_irqs:256 16
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.000000] tsc: Fast TSC calibration failed
+[    0.000000] tsc: Unable to calibrate against PIT
+[    0.000000] tsc: using HPET reference calibration
+[    0.000000] tsc: Detected 3591.696 MHz processor
+[    0.008985] Calibrating delay loop (skipped), value calculated using timer frequency.. 7183.39 BogoMIPS (lpj=3591696)
+[    0.009000] pid_max: default: 32768 minimum: 301
+[    0.009063] ACPI: Core revision 20160930
+[    0.031687] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.032685] Security Framework initialized
+[    0.038126] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.051461] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.058389] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.058663] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.070115] mce: CPU supports 10 MCE banks
+[    0.071155] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.071319] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.256125] random: fast init done
+[    0.461470] Freeing SMP alternatives memory: 36K
+[    0.467940] ftrace: allocating 48063 entries in 188 pages
+[    0.558125] smpboot: Max logical packages: 1
+[    0.564000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.574000] smpboot: CPU0: AMD QEMU Virtual CPU version 2.0.0 (family: 0x6, model: 0x6, stepping: 0x3)
+[    0.579202] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.596686] NMI watchdog: disabled (cpu0): hardware events not enabled
+[    0.597036] NMI watchdog: Shutting down hard lockup detector on all cpus
+[    0.600082] smp: Bringing up secondary CPUs ...
+[    0.600278] smp: Brought up 1 node, 1 CPU
+[    0.600465] smpboot: Total of 1 processors activated (7183.39 BogoMIPS)
+[    0.610402] devtmpfs: initialized
+[    0.613437] x86/mm: Memory block size: 128MB
+[    0.637396] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.637790] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    0.639464] pinctrl core: initialized pinctrl subsystem
+[    0.644416] RTC time: 20:25:46, date: 07/28/17
+[    0.648040] NET: Registered protocol family 16
+[    0.655239] cpuidle: using governor ladder
+[    0.658197] cpuidle: using governor menu
+[    0.658646] PCCT header not found.
+[    0.660670] ACPI: bus type PCI registered
+[    0.661230] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.664462] dca service started, version 1.12.1
+[    0.666476] PCI: Using configuration type 1 for base access
+[    0.782319] ACPI: Added _OSI(Module Device)
+[    0.782595] ACPI: Added _OSI(Processor Device)
+[    0.783041] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.783287] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.824764] ACPI: Interpreter enabled
+[    0.826092] ACPI: (supports S0 S3 S4 S5)
+[    0.826333] ACPI: Using IOAPIC for interrupt routing
+[    0.827174] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.913444] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.914689] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.915425] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    0.917201] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.933572] acpiphp: Slot [3] registered
+[    0.934346] acpiphp: Slot [4] registered
+[    0.935050] acpiphp: Slot [5] registered
+[    0.935566] acpiphp: Slot [6] registered
+[    0.936280] acpiphp: Slot [7] registered
+[    0.936780] acpiphp: Slot [8] registered
+[    0.937303] acpiphp: Slot [9] registered
+[    0.938109] acpiphp: Slot [10] registered
+[    0.938618] acpiphp: Slot [11] registered
+[    0.939272] acpiphp: Slot [12] registered
+[    0.939768] acpiphp: Slot [13] registered
+[    0.940352] acpiphp: Slot [14] registered
+[    0.941123] acpiphp: Slot [15] registered
+[    0.941630] acpiphp: Slot [16] registered
+[    0.942288] acpiphp: Slot [17] registered
+[    0.942785] acpiphp: Slot [18] registered
+[    0.943299] acpiphp: Slot [19] registered
+[    0.944110] acpiphp: Slot [20] registered
+[    0.944641] acpiphp: Slot [21] registered
+[    0.945295] acpiphp: Slot [22] registered
+[    0.945786] acpiphp: Slot [23] registered
+[    0.946294] acpiphp: Slot [24] registered
+[    0.946895] acpiphp: Slot [25] registered
+[    0.947534] acpiphp: Slot [26] registered
+[    0.948248] acpiphp: Slot [27] registered
+[    0.948750] acpiphp: Slot [28] registered
+[    0.949307] acpiphp: Slot [29] registered
+[    0.951160] acpiphp: Slot [30] registered
+[    0.952100] acpiphp: Slot [31] registered
+[    0.952693] PCI host bridge to bus 0000:00
+[    0.953243] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.953656] pci_bus 0000:00: root bus resource [io  0x0d00-0xadff window]
+[    0.954060] pci_bus 0000:00: root bus resource [io  0xae0f-0xaeff window]
+[    0.954427] pci_bus 0000:00: root bus resource [io  0xaf20-0xafdf window]
+[    0.955056] pci_bus 0000:00: root bus resource [io  0xafe4-0xffff window]
+[    0.956088] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.956503] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[    0.957206] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.972188] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.973060] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.973544] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.974096] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.977737] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.978124] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+[    1.015798] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    1.017849] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    1.019590] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    1.021171] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    1.022121] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    1.026628] ACPI: Enabled 16 GPEs in block 00 to 0F
+[    1.035732] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    1.036000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.036157] pci 0000:00:02.0: vgaarb: bridge control possible
+[    1.037064] vgaarb: loaded
+[    1.040655] SCSI subsystem initialized
+[    1.044282] ACPI: bus type USB registered
+[    1.045151] usbcore: registered new interface driver usbfs
+[    1.045786] usbcore: registered new interface driver hub
+[    1.046410] usbcore: registered new device driver usb
+[    1.048296] pps_core: LinuxPPS API ver. 1 registered
+[    1.048554] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.051415] PCI: Using ACPI for IRQ routing
+[    1.066883] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+[    1.067601] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    1.068082] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    1.074731] clocksource: Switched to clocksource hpet
+[    1.316407] VFS: Disk quotas dquot_6.6.0
+[    1.317384] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.322364] pnp: PnP ACPI init
+[    1.337371] pnp: PnP ACPI: found 6 devices
+[    1.395762] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.399370] NET: Registered protocol family 2
+[    1.410795] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    1.413875] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    1.415889] TCP: Hash tables configured (established 65536 bind 65536)
+[    1.416963] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    1.417890] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    1.420729] NET: Registered protocol family 1
+[    1.421494] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.421846] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    1.422437] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.422978] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    7.670872] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    7.671200] software IO TLB [mem 0xbbffe000-0xbfffe000] (64MB) mapped at [ffff9f86bbffe000-ffff9f86bfffdfff]
+[    7.672034] Machine check injector initialized
+[    7.673746] Scanning for low memory corruption every 60 seconds
+[    7.686842] PCLMULQDQ-NI instructions are not detected.
+[    7.687219] AVX or AES-NI instructions are not detected.
+[    7.687402] CPU feature 'AVX registers' is not supported.
+[    7.687564] CPU feature 'AVX registers' is not supported.
+[    7.687723] CPU feature 'AVX registers' is not supported.
+[    7.687890] CPU feature 'AVX registers' is not supported.
+[    7.688121] AVX2 or AES-NI instructions are not detected.
+[    7.688286] AVX2 instructions are not detected.
+[    7.688898] spin_lock-torture:--- Start of test: nwriters_stress=2 nreaders_stress=0 stat_interval=60 verbose=1 shuffle_interval=3 stutter=5 shutdown_secs=0 onoff_interval=0 onoff_holdoff=0
+[    7.689465] spin_lock-torture: Creating torture_shuffle task
+[    7.689884] spin_lock-torture: Creating torture_stutter task
+[    7.690358] spin_lock-torture: torture_shuffle task started
+[    7.690621] spin_lock-torture: Creating lock_torture_writer task
+[    7.690907] spin_lock-torture: torture_stutter task started
+[    7.691285] spin_lock-torture: Creating lock_torture_writer task
+[    7.691573] spin_lock-torture: lock_torture_writer task started
+[    7.691824] spin_lock-torture: Creating lock_torture_stats task
+[    7.692196] spin_lock-torture: lock_torture_writer task started
+[    7.695447] Initialise system trusted keyrings
+[    7.696155] spin_lock-torture: lock_torture_stats task started
+[    7.698758] workingset: timestamp_bits=40 max_order=21 bucket_order=0
+[    7.710664] zbud: loaded
+[    7.717147] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    7.719425] fuse init (API version 7.26)
+[    7.747362] Key type asymmetric registered
+[    7.747536] Asymmetric key parser 'x509' registered
+[    7.748129] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    7.749777] io scheduler noop registered
+[    7.749923] io scheduler deadline registered (default)
+[    7.750319] io scheduler cfq registered
+[    7.750771] test_firmware: interface ready
+[    7.751919] xz_dec_test: module loaded
+[    7.752057] xz_dec_test: Create a device node with 'mknod xz_dec_test c 248 0' and write .xz files to it.
+[    7.754382] cpcihp_zt5550: ZT5550 CompactPCI Hot Plug Driver version: 0.2
+[    7.754642] cpcihp_generic: Generic port I/O CompactPCI Hot Plug Driver version: 0.1
+[    7.754842] cpcihp_generic: not configured, disabling.
+[    7.755130] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    7.760563] acpiphp_ibm: ibm_acpiphp_init: acpi_walk_namespace failed
+[    7.761724] ipmi message handler version 39.2
+[    7.761906] ipmi device interface
+[    7.762336] IPMI System Interface driver.
+[    7.763141] ipmi_si: Unable to find any System Interface(s)
+[    7.763313] IPMI SSIF Interface driver
+[    7.763676] IPMI Watchdog: driver initialized
+[    7.763817] Copyright (C) 2004 MontaVista Software - IPMI Powerdown via sys_reboot.
+[    7.766281] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    7.766796] ACPI: Power Button [PWRF]
+[    7.770385] GHES: HEST is not enabled!
+[    7.770526] EINJ: EINJ table not found.
+[    7.770830] ioatdma: Intel(R) QuickData Technology Driver 4.00
+[    7.771238] xenfs: not registering filesystem on non-xen platform
+[    7.772553] HDLC line discipline maxframe=4096
+[    7.772701] N_HDLC line discipline registered.
+[    7.772858] r3964: Philips r3964 Driver $Revision: 1.10 $
+[    7.773135] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    7.797707] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    7.812305] Cyclades driver 2.6
+[    7.812684] MOXA Intellio family driver version 6.0k
+[    7.812978] MOXA Smartio/Industio family driver version 2.0.5
+[    7.813347] Initializing Nozomi driver 2.1d
+[    7.813589] RocketPort device driver module, version 2.09, 12-June-2003
+[    7.813892] No rocketport ports found; unloading driver
+[    7.814397] SyncLink GT
+[    7.814548] SyncLink GT, tty major#240
+[    7.814737] SyncLink GT no devices found
+[    7.814860] SyncLink MultiPort driver $Revision: 4.38 $
+[    7.842360] SyncLink MultiPort driver $Revision: 4.38 $, tty major#239
+[    7.842547] SyncLink serial driver $Revision: 4.38 $
+[    7.869742] SyncLink serial driver $Revision: 4.38 $, tty major#238
+[    7.870734] Applicom driver: $Id: ac.c,v 1.30 2000/03/22 16:03:57 dwmw2 Exp $
+[    7.870955] ac.o: No PCI boards found.
+[    7.871191] ac.o: For an ISA board you must supply memory and irq parameters.
+[    7.872578] Non-volatile memory driver v1.3
+[    7.873538] telclk_interrupt = 0xf non-mcpbl0010 hw.
+[    7.873890] smapi::smapi_init, ERROR invalid usSmapiID
+[    7.874179] mwave: tp3780i::tp3780I_InitializeBoardData: Error: SMAPI is not available on this machine
+[    7.874424] mwave: mwavedd::mwave_init: Error: Failed to initialize board data
+[    7.874604] mwave: mwavedd::mwave_init: Error: Failed to initialize
+[    7.874798] Linux agpgart interface v0.103
+[    7.875740] SyncLink PC Card driver $Revision: 4.34 $, tty major#237
+[    7.876290] Hangcheck: starting hangcheck timer 0.9.1 (tick is 180 seconds, margin is 60 seconds).
+[    7.877351] AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+[    7.877523] AMD IOMMUv2 functionality not available on this system
+[    7.877858] [drm] Initialized
+[    7.878496] usbcore: registered new interface driver udl
+[    7.931850] brd: module loaded
+[    7.953598] loop: module loaded
+[    7.953727] HP CISS Driver (v 3.6.26)
+[    7.955232] skd:  v2.2.1-b0260 loaded
+[    7.955641] MM: desc_per_page = 128
+[    7.955813] mtip32xx Version 1.3.1
+[    7.966662] null: module loaded
+[    7.969535] zram: Added device: zram0
+[    7.971313] SCSI Media Changer driver v0.25 
+[    7.971624] osd: LOADED open-osd 0.2.1
+[    7.974867] Rounding down aligned max_sectors from 4294967295 to 4294967288
+[    7.979520] SSFDC read-only Flash Translation layer
+[    7.981165] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    7.981428] L440GX flash mapping: failed to find PIIX4 ISA bridge, cannot continue
+[    7.982036] SBC-GXx flash: IO:0x258-0x259 MEM:0xdc000-0xdffff
+[    7.983008] ------------[ cut here ]------------
+[    7.983398] WARNING: CPU: 0 PID: 1 at arch/x86/mm/ioremap.c:121 __ioremap_caller+0x1aa/0x360
+[    7.983635] ioremap on RAM at 0x0000000020000000 - 0x00000000201fffff
+[    7.983906] CPU: 0 PID: 1 Comm: swapper/0 Not tainted 4.10.17+ #143
+[    7.984103] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS Bochs 01/01/2011
+[    7.984174] Call Trace:
+[    7.984174]  dump_stack+0x65/0x89
+[    7.984174]  __warn+0xcc/0xf0
+[    7.984174]  ? nettel_init+0x9a/0x4eb
+[    7.984174]  warn_slowpath_fmt+0x4f/0x60
+[    7.984174]  ? iomem_map_sanity_check+0x97/0xd0
+[    7.984174]  ? nettel_init+0x20/0x4eb
+[    7.984174]  ? nettel_init+0x9a/0x4eb
+[    7.984174]  __ioremap_caller+0x1aa/0x360
+[    7.984174]  ioremap_nocache+0x17/0x20
+[    7.984174]  nettel_init+0x9a/0x4eb
+[    7.984174]  ? kobject_uevent+0xb/0x10
+[    7.984174]  ? driver_register+0x8e/0xe0
+[    7.984174]  ? init_sbc_gxx+0x10f/0x10f
+[    7.984174]  ? mtd_pci_driver_init+0x1b/0x1b
+[    7.984174]  do_one_initcall+0x9a/0x178
+[    7.984174]  ? parse_args+0x26a/0x430
+[    7.984174]  kernel_init_freeable+0x177/0x1f8
+[    7.984174]  ? set_debug_rodata+0x12/0x12
+[    7.984174]  ? rest_init+0x90/0x90
+[    7.984174]  kernel_init+0xe/0x110
+[    7.984174]  ret_from_fork+0x2c/0x40
+[    7.987621] ---[ end trace 4330e709700b5543 ]---
+[    7.987805] SNAPGEAR: failed to ioremap() BOOTCS
+[    7.988591] slram: not enough parameters.
+[    7.988744] Ramix PMC551 PCI Mezzanine Ram Driver. (C) 1999,2000 Nortel Networks.
+[    7.988947] pmc551: not detected
+[    7.993978] ftl_cs: FTL header not found.
+[    8.038838] No valid DiskOnChip devices found
+[    8.040039] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.040469] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.040695] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.040910] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.041245] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.041467] [nandsim] warning: read_byte: unexpected data output cycle, state is STATE_READY return 0x0
+[    8.041827] nand: device found, Manufacturer ID: 0x98, Chip ID: 0x39
+[    8.041997] nand: Toshiba NAND 128MiB 1,8V 8-bit
+[    8.042250] nand: 128 MiB, SLC, erase size: 16 KiB, page size: 512, OOB size: 16
+[    8.042924] flash size: 128 MiB
+[    8.043027] page size: 512 bytes
+[    8.043243] OOB area size: 16 bytes
+[    8.043351] sector size: 16 KiB
+[    8.043442] pages number: 262144
+[    8.043534] pages per sector: 32
+[    8.043626] bus width: 8
+[    8.043704] bits in sector size: 14
+[    8.043809] bits in page size: 9
+[    8.043905] bits in OOB size: 4
+[    8.043998] flash size with OOB: 135168 KiB
+[    8.044289] page address bytes: 4
+[    8.044394] sector address bytes: 3
+[    8.044492] options: 0x42
+[    8.048670] Scanning device for bad blocks
+[    8.109364] Creating 1 MTD partitions on "NAND 128MiB 1,8V 8-bit":
+[    8.109679] 0x000000000000-0x000008000000 : "NAND simulator partition 0"
+[    8.122369] ftl_cs: FTL header not found.
+[    8.131755] usbcore: registered new interface driver r8152
+[    8.132732] usbcore: registered new interface driver asix
+[    8.133620] usbcore: registered new interface driver ax88179_178a
+[    8.134452] usbcore: registered new interface driver cdc_ether
+[    8.135310] usbcore: registered new interface driver net1080
+[    8.135946] usbcore: registered new interface driver cdc_subset
+[    8.136903] usbcore: registered new interface driver zaurus
+[    8.137772] usbcore: registered new interface driver cdc_ncm
+[    8.138542] CHRDEV "uio" major number 233 goes below the dynamic allocation range
+[    8.142947] CHRDEV "usbmon" major number 232 goes below the dynamic allocation range
+[    8.145278] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    8.148000] ehci-pci: EHCI PCI platform driver
+[    8.148984] ehci-platform: EHCI generic platform driver
+[    8.149799] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    8.150559] ohci-pci: OHCI PCI platform driver
+[    8.151439] ohci-platform: OHCI generic platform driver
+[    8.152103] uhci_hcd: USB Universal Host Controller Interface driver
+[    8.153973] usbcore: registered new interface driver cdc_acm
+[    8.154650] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    8.155485] usbcore: registered new interface driver usblp
+[    8.156008] usbcore: registered new interface driver cdc_wdm
+[    8.156815] usbcore: registered new interface driver usbtmc
+[    8.157536] usbcore: registered new interface driver uas
+[    8.158317] usbcore: registered new interface driver usb-storage
+[    8.158849] usbcore: registered new interface driver ums-alauda
+[    8.159550] usbcore: registered new interface driver ums-cypress
+[    8.160408] usbcore: registered new interface driver ums-datafab
+[    8.160949] usbcore: registered new interface driver ums_eneub6250
+[    8.161695] usbcore: registered new interface driver ums-freecom
+[    8.162400] usbcore: registered new interface driver ums-isd200
+[    8.162942] usbcore: registered new interface driver ums-jumpshot
+[    8.163651] usbcore: registered new interface driver ums-karma
+[    8.164445] usbcore: registered new interface driver ums-onetouch
+[    8.164940] usbcore: registered new interface driver ums-realtek
+[    8.165678] usbcore: registered new interface driver ums-sddr09
+[    8.166349] usbcore: registered new interface driver ums-sddr55
+[    8.166835] usbcore: registered new interface driver ums-usbat
+[    8.167886] usbcore: registered new interface driver mdc800
+[    8.168526] mdc800: v0.7.5 (30/10/2000):USB Driver for Mustek MDC800 Digital Camera
+[    8.169366] usbcore: registered new interface driver microtekX6
+[    8.170356] usbcore: registered new interface driver usbserial
+[    8.170938] usbcore: registered new interface driver usbserial_generic
+[    8.171838] usbserial: USB Serial support registered for generic
+[    8.172674] usbcore: registered new interface driver aircable
+[    8.173382] usbserial: USB Serial support registered for aircable
+[    8.173916] usbcore: registered new interface driver ark3116
+[    8.174563] usbserial: USB Serial support registered for ark3116
+[    8.175040] usbcore: registered new interface driver belkin_sa
+[    8.175670] usbserial: USB Serial support registered for Belkin / Peracom / GoHubs USB Serial Adapter
+[    8.176605] usbcore: registered new interface driver ch341
+[    8.179240] usbserial: USB Serial support registered for ch341-uart
+[    8.179708] usbcore: registered new interface driver cp210x
+[    8.180423] usbserial: USB Serial support registered for cp210x
+[    8.180897] usbcore: registered new interface driver cyberjack
+[    8.181514] usbserial: USB Serial support registered for Reiner SCT Cyberjack USB card reader
+[    8.182295] usbcore: registered new interface driver cypress_m8
+[    8.182720] usbserial: USB Serial support registered for DeLorme Earthmate USB
+[    8.183395] usbserial: USB Serial support registered for HID->COM RS232 Adapter
+[    8.183904] usbserial: USB Serial support registered for Nokia CA-42 V2 Adapter
+[    8.184711] usbcore: registered new interface driver usb_debug
+[    8.185340] usbserial: USB Serial support registered for debug
+[    8.185790] usbcore: registered new interface driver digi_acceleport
+[    8.186475] usbserial: USB Serial support registered for Digi 2 port USB adapter
+[    8.186979] usbserial: USB Serial support registered for Digi 4 port USB adapter
+[    8.187668] usbcore: registered new interface driver io_edgeport
+[    8.188331] usbserial: USB Serial support registered for Edgeport 2 port adapter
+[    8.188830] usbserial: USB Serial support registered for Edgeport 4 port adapter
+[    8.189445] usbserial: USB Serial support registered for Edgeport 8 port adapter
+[    8.189916] usbserial: USB Serial support registered for EPiC device
+[    8.190486] usbcore: registered new interface driver io_ti
+[    8.190871] usbserial: USB Serial support registered for Edgeport TI 1 port adapter
+[    8.191545] usbserial: USB Serial support registered for Edgeport TI 2 port adapter
+[    8.192289] usbcore: registered new interface driver empeg
+[    8.192681] usbserial: USB Serial support registered for empeg
+[    8.193295] usbcore: registered new interface driver f81232
+[    8.193712] usbserial: USB Serial support registered for f81232
+[    8.194280] usbcore: registered new interface driver ftdi_sio
+[    8.194678] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    8.195304] usbcore: registered new interface driver garmin_gps
+[    8.195707] usbserial: USB Serial support registered for Garmin GPS usb/tty
+[    8.196406] usbcore: registered new interface driver ipaq
+[    8.196793] usbserial: USB Serial support registered for PocketPC PDA
+[    8.197391] usbcore: registered new interface driver ipw
+[    8.197776] usbserial: USB Serial support registered for IPWireless converter
+[    8.198385] usbcore: registered new interface driver ir_usb
+[    8.198775] usbserial: USB Serial support registered for IR Dongle
+[    8.199404] usbcore: registered new interface driver iuu_phoenix
+[    8.199851] usbserial: USB Serial support registered for iuu_phoenix
+[    8.200519] usbcore: registered new interface driver keyspan
+[    8.200897] usbserial: USB Serial support registered for Keyspan - (without firmware)
+[    8.201512] usbserial: USB Serial support registered for Keyspan 1 port adapter
+[    8.201958] usbserial: USB Serial support registered for Keyspan 2 port adapter
+[    8.202544] usbserial: USB Serial support registered for Keyspan 4 port adapter
+[    8.203036] usbcore: registered new interface driver keyspan_pda
+[    8.203522] usbserial: USB Serial support registered for Keyspan PDA
+[    8.203925] usbserial: USB Serial support registered for Keyspan PDA - (prerenumeration)
+[    8.205199] usbserial: USB Serial support registered for Xircom / Entrega PGS - (prerenumeration)
+[    8.205760] usbcore: registered new interface driver kl5kusb105
+[    8.206348] usbserial: USB Serial support registered for KL5KUSB105D / PalmConnect
+[    8.206834] usbcore: registered new interface driver kobil_sct
+[    8.207342] usbserial: USB Serial support registered for KOBIL USB smart card terminal
+[    8.209587] usbcore: registered new interface driver mct_u232
+[    8.209975] usbserial: USB Serial support registered for MCT U232
+[    8.210510] usbcore: registered new interface driver metro_usb
+[    8.210910] usbserial: USB Serial support registered for Metrologic USB to Serial
+[    8.211506] usbcore: registered new interface driver mos7720
+[    8.211894] usbserial: USB Serial support registered for Moschip 2 port adapter
+[    8.212527] usbcore: registered new interface driver mos7840
+[    8.212901] usbserial: USB Serial support registered for Moschip 7840/7820 USB Serial Driver
+[    8.213591] usbcore: registered new interface driver mxuport
+[    8.213948] usbserial: USB Serial support registered for MOXA UPort
+[    8.214458] usbcore: registered new interface driver navman
+[    8.214830] usbserial: USB Serial support registered for navman
+[    8.215341] usbcore: registered new interface driver omninet
+[    8.215696] usbserial: USB Serial support registered for ZyXEL - omni.net lcd plus usb
+[    8.216316] usbcore: registered new interface driver opticon
+[    8.216669] usbserial: USB Serial support registered for opticon
+[    8.217263] usbcore: registered new interface driver option
+[    8.217628] usbserial: USB Serial support registered for GSM modem (1-port)
+[    8.218176] usbcore: registered new interface driver oti6858
+[    8.218552] usbserial: USB Serial support registered for oti6858
+[    8.218939] usbcore: registered new interface driver pl2303
+[    8.219479] usbserial: USB Serial support registered for pl2303
+[    8.219883] usbcore: registered new interface driver qcaux
+[    8.220359] usbserial: USB Serial support registered for qcaux
+[    8.220749] usbcore: registered new interface driver qcserial
+[    8.221299] usbserial: USB Serial support registered for Qualcomm USB modem
+[    8.221751] usbcore: registered new interface driver quatech2
+[    8.222231] usbserial: USB Serial support registered for Quatech 2nd gen USB to Serial Driver
+[    8.222746] usbcore: registered new interface driver safe_serial
+[    8.223228] usbserial: USB Serial support registered for safe_serial
+[    8.223631] usbcore: registered new interface driver sierra
+[    8.224003] usbserial: USB Serial support registered for Sierra USB modem
+[    8.224533] usbcore: registered new interface driver usb_serial_simple
+[    8.224905] usbserial: USB Serial support registered for carelink
+[    8.225494] usbserial: USB Serial support registered for zio
+[    8.225834] usbserial: USB Serial support registered for funsoft
+[    8.226321] usbserial: USB Serial support registered for flashloader
+[    8.226681] usbserial: USB Serial support registered for google
+[    8.227018] usbserial: USB Serial support registered for vivopay
+[    8.227493] usbserial: USB Serial support registered for moto_modem
+[    8.227881] usbserial: USB Serial support registered for novatel_gps
+[    8.228361] usbserial: USB Serial support registered for hp4x
+[    8.228703] usbserial: USB Serial support registered for suunto
+[    8.229070] usbserial: USB Serial support registered for siemens_mpi
+[    8.229635] usbcore: registered new interface driver spcp8x5
+[    8.229970] usbserial: USB Serial support registered for SPCP8x5
+[    8.230522] usbcore: registered new interface driver ssu100
+[    8.230861] usbserial: USB Serial support registered for Quatech SSU-100 USB to Serial Driver
+[    8.231478] usbcore: registered new interface driver symbolserial
+[    8.231885] usbserial: USB Serial support registered for symbol
+[    8.232445] usbcore: registered new interface driver ti_usb_3410_5052
+[    8.232822] usbserial: USB Serial support registered for TI USB 3410 1 port adapter
+[    8.233442] usbserial: USB Serial support registered for TI USB 5052 2 port adapter
+[    8.233895] usbcore: registered new interface driver visor
+[    8.234353] usbserial: USB Serial support registered for Handspring Visor / Palm OS
+[    8.234798] usbserial: USB Serial support registered for Sony Clie 5.0
+[    8.235292] usbserial: USB Serial support registered for Sony Clie 3.5
+[    8.235705] usbcore: registered new interface driver wishbone_serial
+[    8.236200] usbserial: USB Serial support registered for wishbone_serial
+[    8.236611] usbcore: registered new interface driver whiteheat
+[    8.236951] usbserial: USB Serial support registered for Connect Tech - WhiteHEAT - (prerenumeration)
+[    8.237603] usbserial: USB Serial support registered for Connect Tech - WhiteHEAT
+[    8.238047] usbcore: registered new interface driver xsens_mt
+[    8.238593] usbserial: USB Serial support registered for xsens_mt
+[    8.240948] udc-core: couldn't find an available UDC - added [g_ether] to list of pending drivers
+[    8.242540] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    8.246695] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    8.248009] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    8.250589] mousedev: PS/2 mouse device common for all mice
+[    8.255397] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    8.260730] usbcore: registered new interface driver appletouch
+[    8.261264] usbcore: registered new interface driver bcm5974
+[    8.263620] usbcore: registered new interface driver synaptics_usb
+[    8.268505] usbcore: registered new interface driver iforce
+[    8.273160] usbcore: registered new interface driver xpad
+[    8.273648] usbcore: registered new interface driver usb_acecad
+[    8.274164] usbcore: registered new interface driver aiptek
+[    8.274529] usbcore: registered new interface driver gtco
+[    8.274872] usbcore: registered new interface driver hanwang
+[    8.275379] usbcore: registered new interface driver kbtab
+[    8.276465] usbcore: registered new interface driver usbtouchscreen
+[    8.278008] rtc_cmos 00:00: RTC can wake from S4
+[    8.280672] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+[    8.281674] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram, hpet irqs
+[    8.286380] i2c /dev entries driver
+[    8.288011] pps_ldisc: PPS line discipline registered
+[    8.288619] Driver for 1-wire Dallas network protocol.
+[    8.289603] __power_supply_register: Expected proper parent device for 'test_ac'
+[    8.290818] __power_supply_register: Expected proper parent device for 'test_battery'
+[    8.292578] (NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    8.294016] __power_supply_register: Expected proper parent device for 'test_usb'
+[    8.296824] intel_powerclamp: CPU does not support MWAIT
+[    8.300595] device-mapper: uevent: version 1.0.3
+[    8.306339] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    8.311714] device-mapper: multipath round-robin: version 1.2.0 loaded
+[    8.312130] device-mapper: multipath queue-length: version 0.2.0 loaded
+[    8.312403] device-mapper: multipath service-time: version 0.3.0 loaded
+[    8.313490] device-mapper: cache cleaner: version 1.0.0 loaded
+[    8.314007] CHRDEV "ttySDIO" major number 231 goes below the dynamic allocation range
+[    8.314629] sdhci: Secure Digital Host Controller Interface driver
+[    8.314860] sdhci: Copyright(c) Pierre Ossman
+[    8.315401] wbsd: Winbond W83L51xD SD/MMC card interface driver
+[    8.315624] wbsd: Copyright(c) Pierre Ossman
+[    8.316461] VUB300 Driver rom wait states = 1C irqpoll timeout = 0400
+[    8.317824] usbcore: registered new interface driver vub300
+[    8.318610] usbcore: registered new interface driver ushc
+[    8.319077] sdhci-pltfm: SDHCI platform and OF driver helper
+[    8.320987] leds_ss4200: no LED devices found
+[    8.321911] ledtrig-cpu: registered to indicate activity on CPUs
+[    8.324542] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.2)
+[    8.325451] CHRDEV "qat_adf_ctl" major number 230 goes below the dynamic allocation range
+[    8.331501] CHRDEV "hidraw" major number 229 goes below the dynamic allocation range
+[    8.331885] hidraw: raw HID events driver (C) Jiri Kosina
+[    8.340270] CHRDEV "roccat" major number 228 goes below the dynamic allocation range
+[    8.344354] usbcore: registered new interface driver usbhid
+[    8.344563] usbhid: USB HID core driver
+[    8.345243] CHRDEV "cros_ec" major number 227 goes below the dynamic allocation range
+[    8.345649] cros_ec_lpc: unsupported system.
+[    8.346543] intel_rapl: driver does not support CPU family 6 model 6
+[    8.346890] oprofile: using NMI interrupt.
+[    8.347733] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    8.350676] gre: GRE over IPv4 demultiplexor driver
+[    8.350891] ip_gre: GRE over IPv4 tunneling driver
+[    8.353643] IPv4 over IPsec tunneling driver
+[    8.355612] NET: Registered protocol family 17
+[    8.360524] Loading compiled-in X.509 certificates
+[    8.361551] zswap: loaded using pool lzo/zbud
+[    8.367895] Key type trusted registered
+[    8.370303] Key type encrypted registered
+[    8.372718]   Magic number: 9:607:448
+[    8.373341] acpi APP0001:00: hash matches
+[    8.375390] hd: no drives specified - use hd=cyl,head,sectors on kernel command line
+[    8.380778] rtc_cmos 00:00: setting system clock to 2017-07-28 20:25:54 UTC (1501273554)
+[    8.384409] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    8.384609] EDD information not available.
+[    8.434972] Freeing unused kernel memory: 6488K
+[    8.435336] Write protecting the kernel read-only data: 20480k
+[    8.438372] Freeing unused kernel memory: 916K
+[    8.451275] Freeing unused kernel memory: 1048K
+[    8.737496] tsc: Refined TSC clocksource calibration: 3591.710 MHz
+[    8.738307] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x33c5bc3051a, max_idle_ns: 440795267081 ns
+[    9.340456] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    9.745921] clocksource: Switched to clocksource tsc

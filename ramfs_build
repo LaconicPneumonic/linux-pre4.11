@@ -1,0 +1,164 @@
+Script started on Tue 25 Jul 2017 06:02:23 PM PDT
+]0;arolland@arolland: ~/linux-pre4.11arolland@arolland:~/linux-pre4.11$ cd temp/
+]0;arolland@arolland: ~/linux-pre4.11/temparolland@arolland:~/linux-pre4.11/temp$ cpio -idvu < ../initramfs.linux_amd64.cpio [K[1@s[1@u[1@d[1@o[1@ 
+tcz
+etc
+dev
+ubin
+usr
+usr/lib
+lib64
+bin
+dev/console
+dev/tty
+dev/null
+dev/urandom
+etc/resolv.conf
+etc/localtime
+bin/bash
+lib64/ld-linux-x86-64.so.2
+lib
+lib/x86_64-linux-gnu
+lib/x86_64-linux-gnu/ld-2.19.so
+lib/x86_64-linux-gnu/libtinfo.so.5
+lib/x86_64-linux-gnu/libtinfo.so.5.9
+lib/x86_64-linux-gnu/libdl.so.2
+lib/x86_64-linux-gnu/libdl-2.19.so
+lib/x86_64-linux-gnu/libc.so.6
+lib/x86_64-linux-gnu/libc-2.19.so
+init
+ubin/ansi
+ubin/archive
+ubin/cat
+ubin/chmod
+ubin/cmp
+ubin/comm
+ubin/cp
+ubin/cpio
+ubin/date
+ubin/dd
+ubin/dhclient
+ubin/dmesg
+ubin/echo
+ubin/ectool
+ubin/ed
+ubin/false
+ubin/field
+ubin/fmap
+ubin/freq
+ubin/gpgv
+ubin/grep
+ubin/hexdump
+ubin/hostname
+ubin/insmod
+ubin/installcommand
+ubin/io
+ubin/ip
+ubin/kexec
+ubin/kill
+ubin/ldd
+ubin/ln
+ubin/losetup
+ubin/ls
+ubin/mkdir
+ubin/mknod
+ubin/mm
+ubin/mount
+ubin/msr
+ubin/mv
+ubin/netcat
+ubin/pci
+ubin/pe
+ubin/pflask
+ubin/ping
+ubin/printenv
+ubin/ps
+ubin/pwd
+ubin/rm
+ubin/run
+ubin/rush
+ubin/seq
+ubin/shutdown
+ubin/sleep
+ubin/sort
+ubin/srvfiles
+ubin/stty
+ubin/sync
+ubin/tcz
+ubin/tee
+ubin/true
+ubin/uinit
+ubin/umount
+ubin/uname
+ubin/uniq
+ubin/unshare
+ubin/validate
+ubin/wc
+ubin/wget
+ubin/which
+35832 blocks
+]0;arolland@arolland: ~/linux-pre4.11/temparolland@arolland:~/linux-pre4.11/temp$ l[K[18P(reverse-i-search)`':[Cf': sudo cpio -idvu < ../initramfs.linux_amd64.cpio[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci': GOPATH=~/go ./bb --cmds '/usr/bin/vim.basic /usr/bin/strace /bin/bash /usr/bin/git /usr/bin/Xorg /usr/lib/xorg/Xorg  /usr/bin/ssh /usr/bin/apt-get /lib/i386-linux-gnu/ld-2.19.so /usr/bin/startx /usr/bin/xinit /bin/sh /var/log/Xorg.0.log /usr/bin/xkbcomp /uusr/bin/xterm /usr/bin/X /usr/bin/scp /usr/bin/apt-get /usr/bin/timeout /etc/apt /etc/apt/apt.conf.d /usr/sbin/sshd /etc/ssh/sshd_config' -eextra '/usr/share/vim /usr/lib/xorg /usr/share/X11 /usr/bin/X11 /usr/bin/tr /usr/bin/cut /usr/bin/tail /sbin/ldconfig /bin/bash /lib/i386-liinux-gnu/libnss_compat-2.19.so /lib/i386-linux-gnu/libnss_compat.so.2 /lib/i386-linux-gnu/libnss_dns-2.19.so /lib/i386-linux-gnu/libnss_dns..so.2 /lib/i386-linux-gnu/libnss_files-2.19.so /lib/i386-linux-gnu/libnss_files.so.2 /lib/i386-linux-gnu/libnss_hesiod-2.19.so /lib/i386-linnux-gnu/libnss_hesiod.so.2 /lib/i386-linux-gnu/libnss_nis-2.19.so /lib/i386-linux-gnu/libnss_nisplus-2.19.so /lib/i386-linux-gnu/libnss_nispplus.so.2 /lib/i386-linux-gnu/libnss_nis.so.2 /lib/x86_64-linux-gnu/libnss_compat-2.19.so /lib/x86_64-linux-gnu/libnss_compat.so.2 /lib/x86__64-linux-gnu/libnss_dns-2.19.so /lib/x86_64-linux-gnu/libnss_dns.so.2 /lib/x86_64-linux-gnu/libnss_files-2.19.so /lib/x86_64-linux-gnu/libnnss_files.so.2 /lib/x86_64-linux-gnu/libnss_hesiod-2.19.so /lib/x86_64-linux-gnu/libnss_hesiod.so.2 /lib/x86_64-linux-gnu/libnss_nis-2.19.soo /lib/x86_64-linux-gnu/libnss_nisplus-2.19.so /lib/x86_64-linux-gnu/libnss_nisplus.so.2 /lib/x86_64-linux-gnu/libnss_nis.so.2 /etc/nsswitchh.conf /usr/lib/x86_64-linux-gnu/libnsl.so /lib/i386-linux-gnu/libnsl-2.19.so /lib/i386-linux-gnu/libnsl.so.1 /lib/x86_64-linux-gnu/libnsl-22.19.so /lib/x86_64-linux-gnu/libnsl.so.1 /etc/passwd /etc/group' 'src/github.com/u-root/u-root/cmds/[a-z]*'[A[A[A[C[C[C[C[A[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[51Pn': find . -print | cpio -o -H newc > ../initramfs.linux_amd64.cpio
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C]0;arolland@arolland: ~/linux-pre4.11/temparolland@arolland:~/linux-pre4.11/temp$ find . -print | cpio -o -H newc > ../initramfs.linux_amd64.cpio[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ [1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ 
+45531 blocks
+]0;arolland@arolland: ~/linux-pre4.11/temparolland@arolland:~/linux-pre4.11/temp$ cd ..
+]0;arolland@arolland: ~/linux-pre4.11arolland@arolland:~/linux-pre4.11$ make -j64
+  CHK     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CHK     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  GEN     usr/initramfs_data.cpio.lzma
+  CHK     include/generated/compile.h
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  KSYM    .tmp_kallsyms1.o
+  KSYM    .tmp_kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  CC      arch/x86/boot/version.o
+  VOFFSET arch/x86/boot/compressed/../voffset.h
+  OBJCOPY arch/x86/boot/compressed/vmlinux.bin
+  RELOCS  arch/x86/boot/compressed/vmlinux.relocs
+  CC      arch/x86/boot/compressed/kaslr.o
+  GZIP    arch/x86/boot/compressed/vmlinux.bin.gz
+  CC      arch/x86/boot/compressed/misc.o
+  MKPIGGY arch/x86/boot/compressed/piggy.S
+  AS      arch/x86/boot/compressed/piggy.o
+  DATAREL arch/x86/boot/compressed/vmlinux
+  LD      arch/x86/boot/compressed/vmlinux
+  OBJCOPY arch/x86/boot/vmlinux.bin
+  ZOFFSET arch/x86/boot/zoffset.h
+  AS      arch/x86/boot/header.o
+  LD      arch/x86/boot/setup.elf
+  OBJCOPY arch/x86/boot/setup.bin
+  BUILD   arch/x86/boot/bzImage
+Setup is 16748 bytes (padded to 16896 bytes).
+System is 16055 kB
+CRC bec95b15
+Kernel: arch/x86/boot/bzImage is ready  (#121)
+]0;arolland@arolland: ~/linux-pre4.11arolland@arolland:~/linux-pre4.11$ [13P(reverse-i-search)`':[Cc': cd ..p': find . -print | sudo cpio -o -H newc > ../initramfs.linux_amd64.cpio[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[33P ': cp -PR * ~/linux-pre4.11/temp/lib/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Ps': cp shell.c ../../copy_shell.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[15Pa': cp aash init r': cp arch/x86/boot/bzImage ~/chromiumos/chroot/home/arolland/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;arolland@arolland: ~/linux-pre4.11arolland@arolland:~/linux-pre4.11$ cp arch/x86/boot/bzImage ~/chromiumos/chroot/home/arolland/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;arolland@arolland: ~/linux-pre4.11arolland@arolland:~/linux-pre4.11$ exit
+exit
+
+Script done on Tue 25 Jul 2017 06:03:59 PM PDT
